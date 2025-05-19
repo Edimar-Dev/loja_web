@@ -1,0 +1,19 @@
+
+informações para criar o banco de dados
+-----------------------------------------------
+
+    CRUD
+    Create  - INSERT
+    Read    - SELECT
+    Update  - UPDATE
+    Delete  - DELETE
+
+-----------------------------------------------
+define('MYSQL_SERVER',          'localhost');
+define('MYSQL_DATABASE',        'loja_web');
+define('MYSQL_USER',            'loja_web');
+define('MYSQL_PASS',            '');
+define('MYSQL_CHARSET',         'utf8');
+------------------------------------------------
+
+

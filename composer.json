@@ -1,0 +1,17 @@
+{
+    "name": "edimar.nunes/loja_web",
+    "description": "Loja Web em PHP",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Edimar Nunes",
+            "email": "edimarsanchesnunes@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/"
+        }
+    }
+}

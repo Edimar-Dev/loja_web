@@ -2,6 +2,7 @@
 
 namespace Core\Classes;
 use PDOException;
+use Exception;
 
 use PDO;
 
@@ -37,6 +38,11 @@ class Database
 
     public function select($sql, $params = null)
     {
+
+        if(!preg_match('/^SELECT/i', $sql)) {
+            throw new Exception('Base de dados não é um SELECT');
+        }
+
         //executa função de pesquisa SQL
         $this->ligar();
 
@@ -66,4 +72,137 @@ class Database
 
         return $resultado;
     }
+
+    public function insert($sql, $params = null)
+    {
+
+        //verifica se é uma instração INSERT
+
+        if(!preg_match('/^INSERT/i', $sql)) {
+            throw new Exception('A instrução não é um INSERT');
+        }
+        //liga
+        $this->ligar();
+
+        //comunicar
+        try {
+
+            //comunicar com o banco de dados
+            if (!empty($params)) {
+                $realizar = $this->ligacao->prepare($sql);
+                $realizar->execute($params);
+            } else {
+                $realizar = $this->ligacao->prepare($sql);
+                $realizar->execute();
+            }
+        } catch (PDOException $e) {
+
+            //caso haja erro
+            return false;
+        }
+
+        //desligar o banco de dados
+        $this->desligar();
+
+    }
+
+    public function update($sql, $params = null)
+    {
+
+        //verifica se é uma instração UPDATE
+
+        if(!preg_match('/^UPDATE/i', $sql)) {
+            throw new Exception('A instrução não é um UPDATE');
+        }
+        //liga
+        $this->ligar();
+
+        //comunicar
+        try {
+
+            //comunicar com o banco de dados
+            if (!empty($params)) {
+                $realizar = $this->ligacao->prepare($sql);
+                $realizar->execute($params);
+            } else {
+                $realizar = $this->ligacao->prepare($sql);
+                $realizar->execute();
+            }
+        } catch (PDOException $e) {
+
+            //caso haja erro
+            return false;
+        }
+
+        //desligar o banco de dados
+        $this->desligar();
+
+    }
+
+    public function delete($sql, $params = null)
+    {
+
+        //verifica se é uma instração DELETE
+
+        if(!preg_match('/^DELETE/i', $sql)) {
+            throw new Exception('A instrução não é um DELETE');
+        }
+        //liga
+        $this->ligar();
+
+        //comunicar
+        try {
+
+            //comunicar com o banco de dados
+            if (!empty($params)) {
+                $realizar = $this->ligacao->prepare($sql);
+                $realizar->execute($params);
+            } else {
+                $realizar = $this->ligacao->prepare($sql);
+                $realizar->execute();
+            }
+        } catch (PDOException $e) {
+
+            //caso haja erro
+            return false;
+        }
+
+        //desligar o banco de dados
+        $this->desligar();
+
+    }
+    //-------------------GERERICA--------------------------------------
+
+    public function statement($sql, $params = null)
+    {
+
+        //verifica se é uma instração diferente as acima
+        if(preg_match('/^INSERT|INSERT|UPDATE|DELETE/i', $sql)) {
+            throw new Exception('A instrução não é uma instrucao válida');
+        }
+        //liga
+        $this->ligar();
+
+        //comunicar
+        try {
+
+            //comunicar com o banco de dados
+            if (!empty($params)) {
+                $realizar = $this->ligacao->prepare($sql);
+                $realizar->execute($params);
+            } else {
+                $realizar = $this->ligacao->prepare($sql);
+                $realizar->execute();
+            }
+        } catch (PDOException $e) {
+
+            //caso haja erro
+            return false;
+        }
+
+        //desligar o banco de dados
+        $this->desligar();
+
+    }
 }
+

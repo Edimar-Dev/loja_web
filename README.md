@@ -1,6 +1,3 @@
-# loja_web
-Projeto de desenvolvimento de uma loja virtual utilizando PHP, MySQL, HTML, CSS, Bootstrap, Axios, PHPMailer e mPDF. O objetivo é demonstrar habilidades em PHP puro e boas práticas de desenvolvimento web.
-
 # Loja Web PHP
 
 Este projeto é uma loja virtual desenvolvida com PHP, MySQL, HTML, CSS, Bootstrap, Axios, PHPMailer e mPDF. O objetivo principal é criar uma plataforma de e-commerce funcional para demonstrar habilidades em desenvolvimento web usando PHP puro.

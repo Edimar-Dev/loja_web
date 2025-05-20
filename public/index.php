@@ -1,19 +1,13 @@
 <?php
 
-use Core\Classes\Database;
-
+// Start the session
 session_start();
 
-require_once '../config.php';
+// Load the configuration
+require_once('../config.php');
 
-require_once '../vendor/autoload.php';
+// Load the class
+require_once('../vendor/autoload.php');
 
-
-$bano = new Database();
-
-$clientes = $bano->select("SELECT * FROM clientes");
-
-echo "<pre>";
-print_r($clientes);
-
-
+// Load the router
+require_once('../core/rotas.php');

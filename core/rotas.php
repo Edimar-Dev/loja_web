@@ -1,14 +1,12 @@
 <?php
 
 require_once __DIR__ . '/controladores/Main.php';
-require_once __DIR__ . '/controladores/Loja.php';
 
 //Coletion of routes
 $rotas = [
 
     'inicio' => 'main@index',
     'loja'   => 'main@loja',
-    'carrinho' => 'loja@carrinho',
 ];
 
 //Defines defect  action

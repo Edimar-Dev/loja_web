@@ -2,7 +2,7 @@
 
 namespace core\controladores;
 
-use Core\Classes\Functions;
+use Core\Classes\Loja;
 
 class Main
 {
@@ -11,11 +11,10 @@ class Main
         
 
         $dados = [
-            'titulo'   => 'Página Inicial',
-            'clientes' => ['Pedro', 'Carla', 'Maria']
+            'titulo'   => APP_NAME. ' '. APP_VERSION,
         ];
 
-        Functions::Layout([
+        Loja::Layout([
             'layouts/header',
             'page_inicial',
             'layouts/footer'

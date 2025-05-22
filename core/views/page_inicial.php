@@ -1,8 +1,16 @@
-<h1><?= $titulo ?></h1>
+<?php
+use core\classes\Loja;
 
+$_SESSION['cliente'] = true;
 
-<?php foreach ($clientes as $cliente): ?>
-    <ul>
-        <li><?= $cliente ?></li>
-    </ul>
-<?php endforeach; ?>
+?>
+
+<div>
+
+    <?php if(Loja::clienteLogado()): ?>
+           <p>SIM</p>
+    <?php else: ?>
+           <p>NÃO</p>
+    <?php endif; ?>
+
+</div>

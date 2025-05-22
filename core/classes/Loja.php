@@ -1,10 +1,10 @@
 <?php
 
-namespace Core\Classes;
+namespace core\classes;
 
 use Exception;
 
-class Functions {
+class Loja {
 
 
     public static function Layout($estruturas, $dados = null){
@@ -22,6 +22,12 @@ class Functions {
         foreach($estruturas as $estrutura){
             include(__DIR__ . "/../views/$estrutura.php");
         }
+    }
+
+    public static function clienteLogado(){
+
+        return isset($_SESSION['cliente']);
+
     }
 
 }

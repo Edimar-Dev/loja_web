@@ -30,3 +30,4 @@ $metodo = $partes[1];
 
 $contro = new $controlador();
 $contro->$metodo();
+

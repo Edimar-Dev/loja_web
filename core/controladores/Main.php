@@ -23,9 +23,10 @@ class Main
         ], $dados);
     }
 
-    public function loja()
-    {
-    echo 'loja';
+    public function loja(){
+    
+        echo 'loja!!!';
+
     }
 
 }

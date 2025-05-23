@@ -1,16 +1,10 @@
-<?php
-use core\classes\Loja;
+<div class="container-fluid">
+    <div class="row ">
+        <div class="col-12">
+        
 
-$_SESSION['cliente'] = true;
+        <h1>Página Inicial da Loja</h1>
 
-?>
-
-<div>
-
-    <?php if(Loja::clienteLogado()): ?>
-           <p>SIM</p>
-    <?php else: ?>
-           <p>NÃO</p>
-    <?php endif; ?>
-
+        </div>
+    </div>
 </div>

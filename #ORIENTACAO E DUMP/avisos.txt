@@ -30,3 +30,14 @@ Controller - é a parte do sistema que faz a intermediação entre o Modelo e a 
 Mas vamos trabalhar com VC, 
 
 Não teremos o model, os controlasores que ficarão responsáveis pelas comunicações com o banco de dados.
+--------------------------------------------------------------------------------------------------------------------------
+
+Verificar se existe cliente na sessão
+
+
+ Se o cliente está Logado;
+ - Terá: Sair 
+ -Minha conta
+Se não;
+- Terá: Entrar
+- Registre-se

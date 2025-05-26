@@ -8,11 +8,6 @@ class Main
 {
     public function index()
     {
-        
-
-        $dados = [
-            'titulo'   => APP_NAME. ' '. APP_VERSION,
-        ];
 
         Loja::Layout([
             'layouts/header',
@@ -20,12 +15,32 @@ class Main
             'page_inicial',
             'layouts/footer_menu',
             'layouts/footer'
-        ], $dados);
+        ]);
     }
 
     public function loja(){
     
-        echo 'loja!!!';
+        //Página de apresentação da loja
+        Loja::Layout([
+            'layouts/header',
+            'layouts/header_menu',
+            'page_loja',
+            'layouts/footer_menu',
+            'layouts/footer'
+        ]);
+
+    }
+
+        public function carrinho(){
+    
+        //Página de apresentação do carrinho
+        Loja::Layout([
+            'layouts/header',
+            'layouts/header_menu',
+            'page_carrinho',
+            'layouts/footer_menu',
+            'layouts/footer'
+        ]);
 
     }
 

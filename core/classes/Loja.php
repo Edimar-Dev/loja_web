@@ -31,11 +31,3 @@ class Loja {
     }
 
 }
-/*
-
-header.php - cabecalaho
-nav.php - menu
-inicio - index
-footer.php - rodapé 
-
-*/

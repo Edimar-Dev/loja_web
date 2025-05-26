@@ -1,3 +1,10 @@
+<?php
+use core\classes\Loja;
+$_SESSION['cliente'] = 1; // Simula que o cliente está logado, para testes
+
+?>
+
+
 <div class="container-fluid navegacao">
     <div class="row">
         <div class="col-6 p-3">
@@ -10,8 +17,22 @@
                 <a href="?acao=inicio">Início</a>
                 <a href="?acao=loja">Loja</a>
 
-                <a href=""><i class="fa-solid fa-cart-arrow-down"></i></a>
-                <span class="badge bg-warning">10</span>
+                <!-- Verifica se existe cliente na sessão -->
+                <?php if(Loja::clienteLogado()):?>
+                
+                <a href="">A minha conta</a>
+                <a href="">Sair</a>
+
+                <?php else:?>
+                
+                <a href="">Entrar</a>
+                <a href="">Registar</a>
+
+                <?php endif;?>
+
+                <a href="?acao=carrinho"><i class="fa-solid fa-cart-arrow-down"></i></a>
+
+                <span class="badge bg-warning"></span>
             </div>
     </div>
 </div>

@@ -1,11 +1,22 @@
 /* app.css */
 
 .navegacao{
-    background-color: rgb(102, 128, 165);
+    background-color: rgb(6, 65, 148);
     color: black;
 }
 
 .rodape{
     background-color: rgb(6, 21, 41);
     color: rgb(248, 247, 247);
+}
+
+.menu-item{
+    text-decoration: none;
+    color: white;
+    margin: 0px 10px;
+}
+
+.menu-item:hover{
+    text-decoration: underline;
+    color: white;
 }

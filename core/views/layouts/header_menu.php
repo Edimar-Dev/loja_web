@@ -1,6 +1,6 @@
 <?php
 use core\classes\Loja;
-$_SESSION['cliente'] = 1; // Simula que o cliente está logado, para testes
+// $_SESSION['cliente'] = 1; // Simula que o cliente está logado, para testes
 
 ?>
 
@@ -14,19 +14,19 @@ $_SESSION['cliente'] = 1; // Simula que o cliente está logado, para testes
         </div>
             <div class="col-6 text-end p-3">
 
-                <a href="?acao=inicio">Início</a>
-                <a href="?acao=loja">Loja</a>
+                <a href="?acao=inicio" class="menu-item">Início</a>
+                <a href="?acao=loja" class="menu-item">Loja</a>
 
                 <!-- Verifica se existe cliente na sessão -->
                 <?php if(Loja::clienteLogado()):?>
                 
-                <a href="">A minha conta</a>
-                <a href="">Sair</a>
+                <a href="" class="menu-item">A minha conta</a>
+                <a href="" class="menu-item">Sair</a>
 
                 <?php else:?>
                 
-                <a href="">Entrar</a>
-                <a href="">Registar</a>
+                <a href="" class="menu-item">Entrar</a>
+                <a href="?acao=novo_cliente" class="menu-item">Registar</a>
 
                 <?php endif;?>
 

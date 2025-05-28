@@ -31,6 +31,12 @@ class Main
 
     }
 
+    public function novo_cliente(){
+        //Página de registo de novo cliente
+
+        echo "Página de registo de novo cliente";
+    }
+
         public function carrinho(){
     
         //Página de apresentação do carrinho

@@ -20,12 +20,12 @@ use core\classes\Loja;
                 <!-- Verifica se existe cliente na sessão -->
                 <?php if(Loja::clienteLogado()):?>
                 
-                <a href="" class="menu-item">A minha conta</a>
-                <a href="" class="menu-item">Sair</a>
+                <a href="?acao=minha_conta" class="menu-item">A minha conta</a>
+                <a href="?acao=logout" class="menu-item">Sair</a>
 
                 <?php else:?>
                 
-                <a href="" class="menu-item">Entrar</a>
+                <a href="?acao=login" class="menu-item">Entrar</a>
                 <a href="?acao=novo_cliente" class="menu-item">Registar</a>
 
                 <?php endif;?>

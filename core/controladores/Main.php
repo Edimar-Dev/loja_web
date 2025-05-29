@@ -32,9 +32,39 @@ class Main
     }
 
     public function novo_cliente(){
-        //Página de registo de novo cliente
 
-        echo "Página de registo de novo cliente";
+        // Verifica se o cliente já está logado
+        if(Loja::clienteLogado()) {
+            $this->index();
+            return;
+        }
+
+        //Página de registo de novo cliente
+            Loja::Layout([
+            'layouts/header',
+            'layouts/header_menu',
+            'page_criar_cliente',
+            'layouts/footer_menu',
+            'layouts/footer'
+        ]);
+    }
+
+    public function criar_cliente(){
+
+        // Verifica se o cliente já está logado
+        if(Loja::clienteLogado()) {
+            $this->index();
+            return;
+        }
+
+        // Verifica se o formulário foi enviado
+
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            $this->index();
+            return;
+        }
+
+
     }
 
         public function carrinho(){
